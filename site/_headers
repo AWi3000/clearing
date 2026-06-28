@@ -1,0 +1,12 @@
+# Cloudflare Pages headers — https://developers.cloudflare.com/pages/configuration/headers/
+
+# Sensible security defaults (no CSP, so Google Fonts keeps working)
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: SAMEORIGIN
+  Permissions-Policy: geolocation=(), microphone=(), camera=()
+
+# Long-cache the fingerprint-free static assets (safe: swap by filename when you change an image)
+/assets/*
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
