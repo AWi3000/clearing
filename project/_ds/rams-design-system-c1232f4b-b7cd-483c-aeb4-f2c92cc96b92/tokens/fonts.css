@@ -1,0 +1,13 @@
+/* ============================================================
+   RAMS · Fonts
+   The brand's actual typefaces, loaded from Google Fonts:
+   - DM Sans      — geometric grotesque, stands in for Braun's Futura.
+                    Display, headings, body.
+   - JetBrains Mono — technical mono for readouts, eyebrows, labels,
+                    metadata, LCD text.
+   These are the real source fonts (not substitutes); they are served
+   from Google Fonts CDN. To fully self-host, drop the woff2 files into
+   assets/fonts/ and replace this @import with @font-face rules.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');

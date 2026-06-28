@@ -1,0 +1,43 @@
+/* ============================================================
+   RAMS · Base
+   Light, opinionated resets + brand defaults. Sets the page in the
+   warm-gray world (cream radial wash, DM Sans, warm-black ink).
+   Scoped lightly so it's safe to ship to consumers.
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font-family: var(--rams-font-sans);
+  font-size: var(--rams-text-body);
+  line-height: var(--rams-leading-normal);
+  color: var(--rams-text);
+  background:
+    radial-gradient(1200px 800px at 18% -5%, #ffffff 0%, var(--rams-cream) 55%, var(--rams-cream-dark) 100%);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'kern' 1;
+}
+
+img, svg { max-width: 100%; }
+svg { display: block; }
+
+::selection {
+  background: var(--rams-orange);
+  color: #fff;
+}
+
+/* Tabular numerals helper for any live readout */
+.rams-tnum { font-variant-numeric: tabular-nums; }
+
+/* Mono eyebrow / label helper */
+.rams-eyebrow {
+  font-family: var(--rams-font-mono);
+  font-size: var(--rams-text-xs);
+  letter-spacing: var(--rams-tracking-wider);
+  text-transform: uppercase;
+  color: var(--rams-text-subtle);
+}
